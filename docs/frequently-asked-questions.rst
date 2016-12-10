@@ -3,7 +3,7 @@ Frequently Asked Questions
 ==========================
 
 These are some of the most frequently asked questions on the
-`Mezzanine mailing list <http://groups.google.com/group/mezzanine-users>`_.
+`Yacms mailing list <http://groups.google.com/group/Yacms-users>`_.
 
   * :ref:`prerequisites`
   * :ref:`static-files`
@@ -17,32 +17,32 @@ These are some of the most frequently asked questions on the
   * :ref:`grappelli-filebrowser-forks`
   * :ref:`what-is-pillow`
   * :ref:`missing-features`
-  * :ref:`cartridge-without-mezzanine`
+  * :ref:`cartridge-without-Yacms`
   * :ref:`contributing`
 
 .. _prerequisites:
 
-What do I need to know to use Mezzanine?
+What do I need to know to use Yacms?
 ----------------------------------------
 
-First and foremost, Mezzanine is based on the `Django framework
+First and foremost, Yacms is based on the `Django framework
 <https://www.djangoproject.com/>`_. All aspects of working with
-Mezzanine will benefit from a good understanding of how Django works.
-Many questions that are asked within the Mezzanine
+Yacms will benefit from a good understanding of how Django works.
+Many questions that are asked within the Yacms
 community can easily be answered by reading the `Django documentation
 <https://docs.djangoproject.com/en/>`_.
 
-Setting up a development environment, and deploying a Mezzanine site,
+Setting up a development environment, and deploying a Yacms site,
 is the same process as doing so with a regular Django site. Areas such
 as version control, installing Python packages, and setting up a web
 server  such as `Apache <http://httpd.apache.org/>`_ or `NGINX
 <http://nginx.org/>`_, will all be touched upon.
 
-Modifying the look and feel of a Mezzanine powered site requires at
+Modifying the look and feel of a Yacms powered site requires at
 least an understanding of HTML, CSS and `Django's templating system
 <https://docs.djangoproject.com/en/dev/topics/templates/>`_.
 
-Extending Mezzanine by :ref:`creating-custom-content-types` or using
+Extending Yacms by :ref:`creating-custom-content-types` or using
 additional Django apps, will require some knowledge of programming with
 `Python <http://python.org>`_, as well as a good understanding of
 Django's components, such as
@@ -58,7 +58,7 @@ and the `admin <https://docs.djangoproject.com/en/dev/ref/contrib/admin/>`_.
 Why aren't my JavaScript and CSS files showing up?
 --------------------------------------------------
 
-Mezzanine makes exclusive use of `Django's staticfiles app
+Yacms makes exclusive use of `Django's staticfiles app
 <https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/>`_,
 for managing static files such as JavaScript, CSS, and images.
 
@@ -88,7 +88,7 @@ for more information.
 Why does the WYSIWYG editor strip out my custom HTML?
 -----------------------------------------------------
 
-By default, Mezzanine strips out potentially dangerous HTML from
+By default, Yacms strips out potentially dangerous HTML from
 fields controlled by the WYSIWYG editor, such as tags and attributes
 that could be used to inject JavaScript into a page. If this
 didn't occur, a clever staff member could potentially add JavaScript
@@ -111,7 +111,7 @@ can modify the filter level accordingly. Further customisation is
 possible via the :ref:`RICHTEXT_ALLOWED_TAGS`,
 :ref:`RICHTEXT_ALLOWED_ATTRIBUTES` and :ref:`RICHTEXT_ALLOWED_STYLES`
 settings, which can have extra allowed values appended to using
-the ``append`` argument in Mezzanine's settings API. See the
+the ``append`` argument in Yacms's settings API. See the
 :ref:`registering-settings` section for more information.
 
 `Back to top <#>`_
@@ -124,16 +124,16 @@ Why isn't the homepage a Page object I can edit via the admin?
 In our experience, the homepage of a beautiful, content driven website,
 is quite different from other pages of the site, that all fall under
 sets of repeatable page types. The homepage also differs greatly from
-site to site. Given this, Mezzanine doesn't presume how your homepage
+site to site. Given this, Yacms doesn't presume how your homepage
 will be structured and managed. It's up to you to implement how it
 works per site.
 
-By default, the homepage provided with Mezzanine is a static template,
-namely ``mezzanine/core/templates/index.html`` (or
+By default, the homepage provided with Yacms is a static template,
+namely ``Yacms/core/templates/index.html`` (or
 ``templates/index.html`` if stored directly in your project). You can
 change the ``urlpattern`` for the homepage in your project's
 ``urls.py`` module. Be certain to take a look at the `urls.py module
-<https://github.com/stephenmcd/mezzanine/tree/master/mezzanine/project_template/project_name/urls.py>`_,
+<https://github.com/stephenmcd/Yacms/tree/master/Yacms/project_template/project_name/urls.py>`_,
 as it contains several examples of different types of homepages.
 In ``urls.py`` you'll find examples of pointing the homepage to a
 :class:`.Page` object in the page tree, or pointing the homepage to the blog
@@ -147,20 +147,20 @@ in any way you like.
 
 .. _project-vs-app:
 
-Why is Mezzanine a Django project, and not a Django app?
+Why is Yacms a Django project, and not a Django app?
 --------------------------------------------------------
 
-Mezzanine comes with many features that are related to content driven
+Yacms comes with many features that are related to content driven
 websites, yet are quite distinct from each other. For example
 user-built forms and blog posts are both common requirements for a
-website, yet aren't particularly related to each other. So Mezzanine
+website, yet aren't particularly related to each other. So Yacms
 as a whole is a collection of different Django apps, all packaged
 together to work seamlessly.
 
-Mezzanine provides its own `project template
-<https://github.com/stephenmcd/mezzanine/tree/master/mezzanine/project_template>`_,
+Yacms provides its own `project template
+<https://github.com/stephenmcd/Yacms/tree/master/Yacms/project_template>`_,
 with ``settings.py`` and ``urls.py`` modules that configure all of
-Mezzanine's apps, which you can (and should) modify per project.
+Yacms's apps, which you can (and should) modify per project.
 
 `Back to top <#>`_
 
@@ -169,10 +169,10 @@ Mezzanine's apps, which you can (and should) modify per project.
 Where are all the templates I can modify?
 -----------------------------------------
 
-Each of the templates Mezzanine provides can be found in the
-``templates`` directory of each Django app that Mezzanine is comprised
+Each of the templates Yacms provides can be found in the
+``templates`` directory of each Django app that Yacms is comprised
 of. Take the time to explore the structure of these, starting with the
-base template ``mezzanine/core/templates/base.html`` (or
+base template ``Yacms/core/templates/base.html`` (or
 ``templates/base.html`` if stored directly in your project) which is
 the foundation for the entire site, going more granular as needed.
 
@@ -181,9 +181,9 @@ into your project's ``templates`` directory and modify them there. You
 can also use the ``collecttemplates`` command to copy templates over
 automatically. Run ``python manage.py collecttemplates --help`` for
 more info. Be mindful that this means the copied templates will always
-be used, rather than the ones stored within Mezzanine itself, which is
+be used, rather than the ones stored within Yacms itself, which is
 something to keep in mind if you upgrade to a newer version of
-Mezzanine.
+Yacms.
 
 `Back to top <#>`_
 
@@ -192,37 +192,37 @@ Mezzanine.
 How do I create/install a theme?
 --------------------------------
 
-Prior to version 1.0, Mezzanine had a set of features for creating
+Prior to version 1.0, Yacms had a set of features for creating
 and installing themes. These mostly were in place to address handling
-static files, since at that time Mezzanine was not integrated with
+static files, since at that time Yacms was not integrated with
 `Django's staticfiles app
 <https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/>`_.
-Mezzanine 1.0 makes full use of ``staticfiles``, and so the theming
+Yacms 1.0 makes full use of ``staticfiles``, and so the theming
 features were removed since they became redundant.
 
-From that point on, a theme in Mezzanine can be implemented entirely
+From that point on, a theme in Yacms can be implemented entirely
 as a standard Django app. Simply create a Django app with
 ``templates`` and ``static`` directories, copy the relevant HTML,
-CSS and JavaScript files into it from Mezzanine that you wish to
+CSS and JavaScript files into it from Yacms that you wish to
 modify, and then add the theme app's name to your project's
 :django:setting:`INSTALLED_APPS` setting. Be sure to add the theme to the top of
 the :django:setting:`INSTALLED_APPS` list, so that its templates are found before
-Mezzanine's versions of the templates.
+Yacms's versions of the templates.
 
 Have you created a cool theme that you'd like to share with the
 community? Package your theme up and put it on `PyPI
 <http://pypi.python.org/pypi>`_ and let us know via the `mailing list
-<http://groups.google.com/group/mezzanine-users>`_- that way people
-can automatically install it along with their Mezzanine project.
+<http://groups.google.com/group/Yacms-users>`_- that way people
+can automatically install it along with their Yacms project.
 
 `Back to top <#>`_
 
 .. _not-invented-here:
 
-Why does Mezzanine contain its own [FEATURE] instead of using [PACKAGE]?
+Why does Yacms contain its own [FEATURE] instead of using [PACKAGE]?
 ------------------------------------------------------------------------
 
-To be honest you could implement most of Mezzanine's features by gluing
+To be honest you could implement most of Yacms's features by gluing
 together dozens of smaller, stand-alone, open source Django apps.
 Several larger Django site-building frameworks take this approach, and
 it's a noble one. The downside to this is that a significant portion
@@ -232,30 +232,30 @@ as well as from your project itself. At best you'll be able to work with
 the apps' developers to ease this evolution, at worst you'll be stuck
 hacking work-arounds for incompatibilities between the apps.
 
-One of the core goals of Mezzanine is to avoid this situation, by
+One of the core goals of Yacms is to avoid this situation, by
 providing all of the features commonly required by content driven
 sites, with just the right level of extensibility to customize your
-Mezzanine powered site as required. By taking this approach, the team
-behind Mezzanine is in complete control over its components, and can
+Yacms powered site as required. By taking this approach, the team
+behind Yacms is in complete control over its components, and can
 ensure they work together seamlessly.
 
 `Back to top <#>`_
 
 .. _existing-projects:
 
-How can I add Mezzanine to an existing Django project?
+How can I add Yacms to an existing Django project?
 ------------------------------------------------------
 
-Mezzanine is a Django project made up of multiple Django apps, and is
+Yacms is a Django project made up of multiple Django apps, and is
 geared towards being used as the basis for new Django projects, however
-adding Mezzanine to an existing Django project should be as simple as
+adding Yacms to an existing Django project should be as simple as
 adding the necessary settings and urlpatterns.
 
-Mezzanine contains a `project_template directory
-<https://github.com/stephenmcd/mezzanine/tree/master/mezzanine/project_template>`_,
+Yacms contains a `project_template directory
+<https://github.com/stephenmcd/Yacms/tree/master/Yacms/project_template>`_,
 which it uses to create new projects. In here you'll find the
 necessary ``settings.py`` and ``urls.py`` modules, containing the
-project-level setup for Mezzanine. Of particular note are the following
+project-level setup for Yacms. Of particular note are the following
 settings:
 
   * :django:setting:`INSTALLED_APPS`
@@ -265,7 +265,7 @@ settings:
     `django-grappelli <https://github.com/sehmaschine/django-grappelli>`_ and
     `django-filebrowser <https://github.com/sehmaschine/django-filebrowser>`_
     integration)
-  * The call to ``mezzanine.utils.conf.set_dynamic_settings`` at the
+  * The call to ``Yacms.utils.conf.set_dynamic_settings`` at the
     very end of the ``settings.py`` module.
 
 `Back to top <#>`_
@@ -277,25 +277,25 @@ Why are Grappelli and Filebrowser forked?
 
 `Grappelli <https://github.com/sehmaschine/django-grappelli>`_ and
 `Filebrowser <https://github.com/sehmaschine/django-filebrowser>`_ are
-fantastic Django apps, and Mezzanine's admin interface would be much
-poorer without them. When Mezzanine was first created, both of these apps
+fantastic Django apps, and Yacms's admin interface would be much
+poorer without them. When Yacms was first created, both of these apps
 had packaging issues that went unaddressed for quite some time.
-Development of Mezzanine moved extremely quickly during its early days,
+Development of Yacms moved extremely quickly during its early days,
 and so the forks `grappelli_safe <https://github.com/stephenmcd/grappelli-safe>`_
 and `filebrowser_safe <https://github.com/stephenmcd/filebrowser-safe>`_
-were created to allow Mezzanine to be packaged up and installed in a
+were created to allow Yacms to be packaged up and installed in a
 single step.
 
 Over time the packaging issues were resolved, but Grappelli and
-Filebrowser took paths that weren't desired in Mezzanine.
-They're only used in Mezzanine for skinning the admin, and providing
+Filebrowser took paths that weren't desired in Yacms.
+They're only used in Yacms for skinning the admin, and providing
 a generic media library. Extra features that have been added to
 Grappelli and Filebrowser along the way, haven't been necessary for
-Mezzanine.
+Yacms.
 
 Over time, small changes have also been made to the ``grappelli_safe``
 and ``filebrowser_safe`` forks, in order to integrate them more closely
-with Mezzanine. So to this day, the forks are still used as
+with Yacms. So to this day, the forks are still used as
 dependencies. They're stable, and have relatively low activity.
 
 `Back to top <#>`_
@@ -305,31 +305,31 @@ dependencies. They're stable, and have relatively low activity.
 What is this Pillow dependency?
 -------------------------------
 
-Mezzanine makes use of `Python Imaging Library
+Yacms makes use of `Python Imaging Library
 <http://www.pythonware.com/products/pil/>`_ (PIL) for generating
 thumbnails. Having PIL as a dependency that gets automatically
-installed with Mezzanine has caused issues for some people, due to
+installed with Yacms has caused issues for some people, due to
 certain issues with PIL's own packaging setup.
 
 `Pillow <http://pypi.python.org/pypi/Pillow>`_ is simply a packaging
 wrapper around PIL that addresses these issues, and ensures PIL is
-automatically installed correctly when installing Mezzanine. Pillow is
+automatically installed correctly when installing Yacms. Pillow is
 only used when PIL is not already installed.
 
 `Back to top <#>`_
 
 .. _missing-features:
 
-Why doesn't Mezzanine have [FEATURE]?
+Why doesn't Yacms have [FEATURE]?
 -------------------------------------
 
 The best answer to this might be found by searching the `mailing
-list <http://groups.google.com/group/mezzanine-users>`_, where many
-features that aren't currently in Mezzanine have been thoroughly
+list <http://groups.google.com/group/Yacms-users>`_, where many
+features that aren't currently in Yacms have been thoroughly
 discussed.
 
 Sometimes the conclusion is that certain features aren't within the
-scope of what Mezzanine aims to be. Sometimes they're great ideas, yet
+scope of what Yacms aims to be. Sometimes they're great ideas, yet
 no one has had the time to implement them yet. In the case of the
 latter, the quickest way to get your feature added is to get working on
 it yourself.
@@ -343,20 +343,20 @@ understanding everything involved, without any previous communication.
 
 `Back to top <#>`_
 
-.. _cartridge-without-mezzanine:
+.. _cartridge-without-Yacms:
 
-Can I use Cartridge without Mezzanine?
+Can I use Cartridge without Yacms?
 --------------------------------------
 
 No. `Cartridge <http://cartridge.jupo.org>`_ (an ecommerce app)
-heavily leverages Mezzanine, and in fact it is implemented as an
-advanced example of a Mezzanine content type, where each shop category
-is a page in Mezzanine's navigation tree. This allows for a very
+heavily leverages Yacms, and in fact it is implemented as an
+advanced example of a Yacms content type, where each shop category
+is a page in Yacms's navigation tree. This allows for a very
 flexible shop structure, where hierarchical categories can be set up
 to create your shop.
 
-You could very well use Cartridge and Mezzanine to build a pure
-Cartridge site, without using any of Mezzanine's features that
+You could very well use Cartridge and Yacms to build a pure
+Cartridge site, without using any of Yacms's features that
 aren't relevant to Cartridge. However more often than not, you'll
 find that general content pages and forms, will be required to some
 extent anyway.
@@ -369,20 +369,20 @@ I don't know how to code, how can I contribute?
 -----------------------------------------------
 
 You're in luck! Programming is by far the most abundant skill
-contributed to Mezzanine, and subsequently the least needed. There are
+contributed to Yacms, and subsequently the least needed. There are
 many ways to contribute without writing any code:
 
   * Answering questions on the `mailing list
-    <http://groups.google.com/group/mezzanine-users>`_
+    <http://groups.google.com/group/Yacms-users>`_
   * Triaging `issues on GitHub
-    <https://github.com/stephenmcd/mezzanine/issues>`_
+    <https://github.com/stephenmcd/Yacms/issues>`_
   * Improving the documentation
-  * Promoting Mezzanine via blogs, `Twitter <http://twitter.com>`_, etc.
+  * Promoting Yacms via blogs, `Twitter <http://twitter.com>`_, etc.
 
 If you don't have time for any of these things, and still want to
-contribute back to Mezzanine, donations are always welcome and can be
-made via Flattr or PayPal on the `Mezzanine homepage <http://mezzanine.jupo.org>`_.
-Donations help to support the continued development of Mezzanine, and go
+contribute back to Yacms, donations are always welcome and can be
+made via Flattr or PayPal on the `Yacms homepage <http://Yacms.jupo.org>`_.
+Donations help to support the continued development of Yacms, and go
 towards paying for infrastructure, such as hosting for the demo site.
 
 `Back to top <#>`_

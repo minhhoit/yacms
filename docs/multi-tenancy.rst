@@ -2,18 +2,18 @@
 Multi-Tenancy
 =============
 
-Mezzanine makes use of Django's ``sites`` app to support multiple sites in a
-single project. This functionality is always "turned on" in Mezzanine: a
+Yacms makes use of Django's ``sites`` app to support multiple sites in a
+single project. This functionality is always "turned on" in Yacms: a
 single ``Site`` record always exists, and is referenced when retrieving site
-related data, which most content in Mezzanine falls under.
+related data, which most content in Yacms falls under.
 
-Where Mezzanine diverges from Django is how the ``Site`` record is retrieved.
+Where Yacms diverges from Django is how the ``Site`` record is retrieved.
 Typically a running instance of a Django project is bound to a single site
 defined by the :django:setting:`SITE_ID` setting, so while a project may
 contain support for multiple sites, a separate running instance of the project
 is required per site.
 
-Mezzanine uses a pipeline of checks to determine which site to reference when
+Yacms uses a pipeline of checks to determine which site to reference when
 accessing content. The most important of these is the one where the host name
 of the current request is compared to the domain name specified for each
 ``Site`` record. With this in place, true multi-tenancy is achieved, and
@@ -23,16 +23,16 @@ Here's the list of checks in the pipeline, in order:
 
   * The session variable ``site_id``. This allows a project to include
     features where a user's session is explicitly associated with a site.
-    Mezzanine uses this in its admin to allow admin users to switch between
+    Yacms uses this in its admin to allow admin users to switch between
     sites to manage, while accessing the admin on a single domain.
   * The domain matching the host of the current request, as described
     above.
-  * The environment variable ``MEZZANINE_SITE_ID``. This allows
+  * The environment variable ``Yacms_SITE_ID``. This allows
     developers to specify the site for contexts outside of a HTTP
-    request, such as management commands. Mezzanine includes a custom
+    request, such as management commands. Yacms includes a custom
     ``manage.py`` which will check for (and remove) a ``--site=ID``
     argument.
-  * Finally, Mezzanine will fall back to the :django:setting:`SITE_ID` setting
+  * Finally, Yacms will fall back to the :django:setting:`SITE_ID` setting
     if none of the above checks can occur.
 
 Per-site Themes
@@ -105,12 +105,12 @@ Each theme would be listed under the :django:setting:`INSTALLED_APPS` setting,
 with the "base" theme, ``example_theme``, listed first.
 
 The project's main ``urls.py`` would need the following line active,
-so that "/" is the target URL Mezzanine finds for home page rendering
+so that "/" is the target URL Yacms finds for home page rendering
 (via the ``HomePage`` content type)::
 
-    url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
+    url("^$", "Yacms.pages.views.page", {"slug": "/"}, name="home"),
 
-Mezzanine will look for a page instance at '/' for each theme.
+Yacms will look for a page instance at '/' for each theme.
 ``HomePage`` instances would be created via the admin system for each
 site, and given the URL of '/' under the "Meta data" URL field. (Log
 in to /admin, pick each site, in turn, creating a ``HomePage`` instance,

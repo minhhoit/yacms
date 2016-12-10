@@ -2,22 +2,22 @@
 Multi-Lingual Sites
 ===================
 
-Mezzanine provides optional support for `django-modeltranslation
+Yacms provides optional support for `django-modeltranslation
 <https://readthedocs.org/projects/django-modeltranslation/>`_ which
 enables content editors to provide multi-lingual content to support
 sites in multiple languages.
 
 .. note::
-    Mezzanine only provides the integration of django-modeltranslation.
+    Yacms only provides the integration of django-modeltranslation.
     For dedicated assistance, please check out the documentation for
     django-modeltranslation: `documentation
     <https://readthedocs.org/projects/django-modeltranslation/>`_ or
     its `code <https://github.com/deschler/django-modeltranslation>`_.
 
-Translation Fields in Mezzanine
+Translation Fields in Yacms
 ===============================
 
-In order to enable translation fields for Mezzanine content, you will
+In order to enable translation fields for Yacms content, you will
 need to install django-modeltranslation and activate the app in your
 ``settings.py``. Once you have `installed django-modeltranslation
 <http://django-modeltranslation.readthedocs.org/en/latest/installation.html>`_,
@@ -44,7 +44,7 @@ older projects, you can catch up by running
 Translation Fields for Custom Applications
 ==========================================
 
-For models that don't inherit from Mezzanine's models, again please consult
+For models that don't inherit from Yacms's models, again please consult
 `django-modeltranslation's documentation
 <http://django-modeltranslation.readthedocs.org/en/latest/registration.html>`_.
 To start with, you'll need to provide a ``translation.py`` module,
@@ -52,29 +52,29 @@ containing classes describing which of your model fields you wish to
 translate, as well as registering your models using the
 ``modeltranslation.translator.translator.register`` method.
 
-For models that extends Mezzanine capabilities, there are two rules:
+For models that extends Yacms capabilities, there are two rules:
 
 Firstly, the app in which your model is defined must be listed *after*
 the app it is extending from in your :django:setting:`INSTALLED_APPS`
-setting. For example, :mod:`mezzanine.forms` extends models from
-:mod:`mezzanine.pages` and should appear after it.
+setting. For example, :mod:`Yacms.forms` extends models from
+:mod:`Yacms.pages` and should appear after it.
 
 .. note::
     If your app defines both models that need to be translated and
     static content or templates that override default ones from
-    Mezzanine, you'll need to split your app to distinguish
+    Yacms, you'll need to split your app to distinguish
     between presentation and content. This is due to conflicting
     ideas with translated model inheritance, and template or static
     file overriding, in regard to the order of :django:setting:`INSTALLED_APPS``
 
 Secondly, for an external app, create a ``translation.py`` module
 at the root of your app. The content of this file might benefit
-from :mod:`mezzanine.core.translation` depending on what you are
+from :mod:`Yacms.core.translation` depending on what you are
 extending from. For example, to improve the model from
 :doc:`content-architecture` and provide translatable fields::
 
     from django.db import models
-    from mezzanine.pages.models import Page
+    from Yacms.pages.models import Page
 
     class Author(Page):
         dob = models.DateField("Date of birth")
@@ -99,23 +99,23 @@ A corresponding ``translation.py`` module in this app would look like::
     translator.register(Author, TranslatedAuthor)
     translator.register(Book, TranslatedBook)
 
-In this case, please note :class:`mezzanine.pages.translation.TranslatedPage`
+In this case, please note :class:`Yacms.pages.translation.TranslatedPage`
 is not referenced in any way. This is due to the fact that
-:class:`mezzanine.pages.models.Page` is not abstract, and thus has its own
+:class:`Yacms.pages.models.Page` is not abstract, and thus has its own
 table in the database. The fields have already been registered for
 translation and django-modeltranslation will happily handle it for you.
 
 If you want to extend an abstract model, such as
-:class:`mezzanine.core.models.Slugged` or
-:class:`mezzanine.core.models.Displayable`, you will need to subclass their
-translation registration. An example of this is the :mod:`mezzanine.blog` app
+:class:`Yacms.core.models.Slugged` or
+:class:`Yacms.core.models.Displayable`, you will need to subclass their
+translation registration. An example of this is the :mod:`Yacms.blog` app
 in its :mod:`.translation.py` module::
 
     from modeltranslation.translator import translator
-    from mezzanine.core.translation import (TranslatedSlugged,
+    from Yacms.core.translation import (TranslatedSlugged,
                                             TranslatedDisplayable,
                                             TranslatedRichText)
-    from mezzanine.blog.models import BlogCategory, BlogPost
+    from Yacms.blog.models import BlogCategory, BlogPost
 
     class TranslatedBlogPost(TranslatedDisplayable, TranslatedRichText):
         fields = ()
@@ -127,8 +127,8 @@ in its :mod:`.translation.py` module::
     translator.register(BlogCategory, TranslatedBlogCategory)
 
 You don't add translatable fields in your model beside those
-already defined inside Mezzanine's models. You need to extend from
-:mod:`mezzanine.core.translation` classes, so django-modeltranslation
+already defined inside Yacms's models. You need to extend from
+:mod:`Yacms.core.translation` classes, so django-modeltranslation
 is aware of the abstract fields it will have to manage.
 
 After that, you can ``manage.py createdb`` for a new project or
@@ -138,7 +138,7 @@ After that, you can ``manage.py createdb`` for a new project or
 Translation Fields and Migrations
 =================================
 
-Mezzanine is shipped with its own migration files but these do not take
+Yacms is shipped with its own migration files but these do not take
 translation fields into account. These fields are created by every
 project's :django:setting:`LANGUAGES` setting and thus can't be provided by default.
 If you want to both manage migrations for your project and enable
@@ -169,14 +169,14 @@ to :django:setting:`MIGRATION_MODULES``
 Translation for Injected Fields
 ===============================
 
-If you added fields in Mezzanine's models through
+If you added fields in Yacms's models through
 :ref:`EXTRA_MODEL_FIELDS` and want to add translations, you will need
 to create a custom app that will hold the necessary ``translation.py`` module.
-Adding a translation field to all of Mezzanine's content type would look like::
+Adding a translation field to all of Yacms's content type would look like::
 
   EXTRA_MODEL_FIELDS = (
       (
-          "mezzanine.pages.models.Page.quote",
+          "Yacms.pages.models.Page.quote",
           "TextField",
           ("Page's Quote",),
           {"blank": True},
@@ -184,15 +184,15 @@ Adding a translation field to all of Mezzanine's content type would look like::
   )
 
 The app containing the corresponding ``translation.py`` module should
-be defined *after* :mod:`mezzanine.pages` in :django:setting:`INSTALLED_APPS` but
+be defined *after* :mod:`Yacms.pages` in :django:setting:`INSTALLED_APPS` but
 *before* any app that contains models that subclass
-:class:`mezzanine.pages.models.Page` (such as :mod:`mezzanine.forms`,
-:mod:`mezzanine.galleries` or ``cartridge.shop``). The ``translation.py``
+:class:`Yacms.pages.models.Page` (such as :mod:`Yacms.forms`,
+:mod:`Yacms.galleries` or ``cartridge.shop``). The ``translation.py``
 file itself would be::
 
     from modeltranslation.translator import translator
-    from mezzanine.pages.translation import TranslatedPage
-    from mezzanine.pages.models import Page
+    from Yacms.pages.translation import TranslatedPage
+    from Yacms.pages.models import Page
 
     class TranslatedInjectedPage(TranslatedPage):
         fields = ('quote',),
@@ -200,12 +200,12 @@ file itself would be::
     translator.unregister(Page)
     translator.register(Page, TranslatedInjectedPage)
 
-Redistributable Applications for Mezzanine
+Redistributable Applications for Yacms
 ==========================================
 
-If you want to provide translation support for your Mezzanine app,
+If you want to provide translation support for your Yacms app,
 make sure it works with both :ref:`USE_MODELTRANSLATION` set to ``True``
-or ``False``. Mezzanine enforces the value to ``False`` if
+or ``False``. Yacms enforces the value to ``False`` if
 django-modeltranslation is not installed.
 
 The :ref:`USE_MODELTRANSLATION` setting can therefore be used to check
@@ -216,5 +216,5 @@ module will just be ignored.
 
 The :ref:`USE_MODELTRANSLATION` setting is also available in the
 template's ``settings`` variable. Have a look at the
-``includes/language_selector.html`` template in :mod:`mezzanine.core`
+``includes/language_selector.html`` template in :mod:`Yacms.core`
 for a working example.

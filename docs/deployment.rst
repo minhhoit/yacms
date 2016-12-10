@@ -2,8 +2,8 @@
 Deployment
 ==========
 
-Deployment of a Mezzanine site to production is mostly identical to
-deploying a regular Django site. For serving static content, Mezzanine
+Deployment of a Yacms site to production is mostly identical to
+deploying a regular Django site. For serving static content, Yacms
 makes full use of Django's ``staticfiles`` app. For more information,
 see the Django docs for
 `deployment <https://docs.djangoproject.com/en/dev/howto/deployment/>`_ and
@@ -12,8 +12,8 @@ see the Django docs for
 Fabric
 ======
 
-Each Mezzanine project comes bundled with utilities for deploying
-production Mezzanine sites, using `Fabric <http://fabfile.org>`_.
+Each Yacms project comes bundled with utilities for deploying
+production Yacms sites, using `Fabric <http://fabfile.org>`_.
 The provided ``fabfile.py`` contains composable commands that can be
 used to set up all the system-level requirements on a new
 `Debian <http://debian.org>`_ based system, manage each of the
@@ -37,7 +37,7 @@ The deployed stack consists of the following components:
 
 .. note::
 
-  None of the items listed above are required for deploying Mezzanine,
+  None of the items listed above are required for deploying Yacms,
   they're simply the components that have been chosen for use in the
   bundled ``fabfile.py``. Alternatives such as `Apache
   <http://httpd.apache.org/>`_ and `MySQL <http://www.mysql.com/>`_
@@ -73,7 +73,7 @@ module. Here's an example, that leverages some existing setting names::
 Commands
 --------
 
-Here's the list of commands provided in a Mezzanine project's
+Here's the list of commands provided in a Yacms project's
 ``fabfile.py``. Consult the `Fabric documentation <http://fabfile.org>`_
 for more information on working with these:
 
@@ -94,7 +94,7 @@ CASE 1: Deploying to a brand new server
    The new user will be created and you can SSH with that from now on (if
    needed). For security reason, root login via SSH is disabled by this task.
 4. Run ``fab all``. It will take a while to install the required environment,
-   but after that, your Mezzanine site will be live.
+   but after that, your Yacms site will be live.
 
 Notice that not even once you had to manually SSH into your VPS. *Note: some
 server providers (like Digital Ocean) require you to login as root once to

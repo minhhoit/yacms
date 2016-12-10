@@ -2,7 +2,7 @@
 Importing External Blogs
 ========================
 
-Mezzanine has the ability to import blog posts from other blogging
+Yacms has the ability to import blog posts from other blogging
 platforms using a `Django management command
 <http://docs.djangoproject.com/en/dev/howto/custom-management-commands/>`_.
 These are the currently supported formats and their commands:
@@ -13,11 +13,11 @@ These are the currently supported formats and their commands:
   * `Posterous <http://posterous.com>`_: ``import_posterous``
   * `RSS <http://en.wikipedia.org/wiki/RSS>`_: ``import_rss``
 
-Each command takes a Mezzanine username to assign the blog posts to
+Each command takes a Yacms username to assign the blog posts to
 as well as certain arguments specific to the blog platform. For
 example to import an existing Wordpress blog::
 
-    $ python manage.py import_wordpress --mezzanine-user=username [options]
+    $ python manage.py import_wordpress --Yacms-user=username [options]
 
 Use the ``--help`` argument to learn more about the arguments specific
 to each blog platform's command. For example you can see all options
@@ -63,7 +63,7 @@ your export file make a note of the location you saved it to.
 The next step is to run the ``import_wordpress`` command where the
 ``url`` argument contains the path or URL to your export file::
 
-    $ python manage.py import_wordpress --mezzanine-user=.. --url=[path|URL]
+    $ python manage.py import_wordpress --Yacms-user=.. --url=[path|URL]
 
 Importing from Blogger
 ======================
@@ -88,7 +88,7 @@ the import.
 The next step is to run the ``import_blogger`` command where the
 ``blogger-id`` argument contains the Blogger ID you retrieved::
 
-    $ python manage.py import_blogger --mezzanine-user=.. --blogger-id=XXX
+    $ python manage.py import_blogger --Yacms-user=.. --blogger-id=XXX
 
 Importing from Tumblr
 =====================
@@ -96,7 +96,7 @@ Importing from Tumblr
 Simply run the ``import_tumblr`` command where the ``tumblr-user``
 argument contains your Tumblr username::
 
-    $ python manage.py import_blogger --mezzanine-user=.. --tumblr-user=username
+    $ python manage.py import_blogger --Yacms-user=.. --tumblr-user=username
 
 Importing RSS
 =============
@@ -109,7 +109,7 @@ Dependencies
 Simply run the ``import_rss`` command where the ``rss-url`` argument
 contains the URL for your RSS feed::
 
-    $ python manage.py import_rss --mezzanine-user=.. --rss-url=url
+    $ python manage.py import_rss --Yacms-user=.. --rss-url=url
 
 Importing from Posterous
 ========================
@@ -123,7 +123,7 @@ Simply run ``import_posterous`` command with the right params. You need
 to get your API key from the `Posterous API Reference
 <https://posterous.com/api>`_::
 
-    $ python manage.py import_posterous --mezzanine-user=.. --api-token=.. --posterous-user=your_posterous_login --posterous-pass=your_posterous_password
+    $ python manage.py import_posterous --Yacms-user=.. --api-token=.. --posterous-user=your_posterous_login --posterous-pass=your_posterous_password
 
 If you have more than one blog on your posterous account check out
 the ``-posterous-host`` option. Be aware that like the tumblr
@@ -138,33 +138,33 @@ The importer system has been designed to be extensible so that import
 commands can easily be added for other blogging platforms.
 
 Each importer's management command is located in the
-:mod:`mezzanine.blog.management.commands` package, and should have its
+:mod:`Yacms.blog.management.commands` package, and should have its
 module named ``import_type`` where ``type`` represents the type of
 import the command is for. This module will then contain a class named
 ``Command`` which subclasses
-:class:`mezzanine.blog.management.base.BaseImporterCommand`.
+:class:`Yacms.blog.management.base.BaseImporterCommand`.
 
 The first step is to define any custom arguments the command will
 require using Python's `optparse
 <http://docs.python.org/library/optparse.html>`_ handling.
 
 The main responsbility of the ``Command`` class is then to implement a
-:meth:`~mezzanine.blog.management.base.BaseImporterCommand.handle_import`
+:meth:`~Yacms.blog.management.base.BaseImporterCommand.handle_import`
 method which handles retrieving blog posts and comments from the
-particular blogging platform. The :meth:`~mezzanine.blog.management.\
+particular blogging platform. The :meth:`~Yacms.blog.management.\
 base.BaseImporterCommand.handle_import` method is passed a dictionary
-of options for the command. The :meth:`~mezzanine.blog.management.base.\
-BaseImporterCommand.add_post` and :meth:`~mezzanine.blog.management.\
+of options for the command. The :meth:`~Yacms.blog.management.base.\
+BaseImporterCommand.add_post` and :meth:`~Yacms.blog.management.\
 base.BaseImporterCommand.add_comment` methods should be called inside
-the :meth:`~mezzanine.blog.management.base.BaseImporterCommand.\
+the :meth:`~Yacms.blog.management.base.BaseImporterCommand.\
 handle_import` method, adding posts and comments respectively. The
-:meth:`~mezzanine.blog.management.base.BaseImporterCommand.add_post`
-method returns a post to be used with the :meth:`~mezzanine.blog.\
+:meth:`~Yacms.blog.management.base.BaseImporterCommand.add_post`
+method returns a post to be used with the :meth:`~Yacms.blog.\
 management.base.BaseImporterCommand.add_comment` method. For example::
 
     from optparse import make_option
     from django.core.management.base import CommandError
-    from mezzanine.blog.management.base import BaseImporterCommand
+    from Yacms.blog.management.base import BaseImporterCommand
 
     class Command(BaseImporterCommand):
 

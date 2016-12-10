@@ -2,7 +2,7 @@
 Search Engine
 =============
 
-Mezzanine provides a built-in search engine that allows site visitors to
+Yacms provides a built-in search engine that allows site visitors to
 search across different types of content. It includes several tools that
 enable developers to adjust the scope of the site search. It also includes
 a Search API to programmatically interact with the search engine,
@@ -16,7 +16,7 @@ Search Form
 Developers can easily customize the scope of the searches via the
 ``{% search_form %}`` template tag. A default list of searchable models
 can be specified in the :ref:`SEARCH_MODEL_CHOICES` setting. Only
-models that subclass :class:`mezzanine.core.models.Displayable` should
+models that subclass :class:`Yacms.core.models.Displayable` should
 be used. In addition, the actual HTML form can be customized in the
 ``includes/search_form.html`` template.
 
@@ -24,7 +24,7 @@ be used. In addition, the actual HTML form can be customized in the
 
     In ``SEARCH_MODEL_CHOICES`` and ``{% search_form %}``, all model names
     must be strings in the format ``app_label.model_name``. These models
-    can be part of Mezzanine's core, or part of third party applications.
+    can be part of Yacms's core, or part of third party applications.
     However, all these model must subclass :class:`.Page` or :class:`.Displayable`.
 
 Using ``{% search_form "all" %}`` will render a search form with a
@@ -55,7 +55,7 @@ subclass :class:`.Displayable` will be automatically searched.
 Search API
 ==========
 
-The main search API is provided by :class:`mezzanine.core.managers\
+The main search API is provided by :class:`Yacms.core.managers\
 .SearchableManager`. This is a Django model manager that provides a custom
 :meth:`.SearchableManager.search` method. Adding search functionality to
 any model is as simple as using the :class:`.SearchableManager` as a
@@ -66,10 +66,10 @@ manager for your model.
     By following the previous example outlined in
     :ref:`creating-custom-content-types` no extra work is required to have
     your custom content included in search queries, as the default search
-    functionality in Mezzanine (defined in
-    :func:`mezzanine.core.views.search`) automatically covers any models
-    that inherit from :class:`mezzanine.pages.models.Page` or
-    :class:`mezzanine.core.models.Displayable`.
+    functionality in Yacms (defined in
+    :func:`Yacms.core.views.search`) automatically covers any models
+    that inherit from :class:`Yacms.pages.models.Page` or
+    :class:`Yacms.core.models.Displayable`.
 
 In its most simple form, the :meth:`.SearchableManager.search`
 method takes a single string argument containing a search
@@ -77,14 +77,14 @@ query and returns a Django queryset representing the results.
 For example, to search for all pages using the
 term **plans prices projects**::
 
-    from mezzanine.pages.models import Page
+    from Yacms.pages.models import Page
 
     results = Page.objects.search("plans prices projects")
 
 It's also possible to explicitly control which fields will be used for the
 search. For example to search ``Page.title`` and ``Page.content`` only::
 
-    from mezzanine.pages.models import Page
+    from Yacms.pages.models import Page
 
     query = "plans prices projects"
     search_fields = ("title", "content")
@@ -98,8 +98,8 @@ search capabilities to our :class:`.GalleryImage` model from the previous
 example in :ref:`creating-custom-content-types`::
 
     from django.db import models
-    from mezzanine.pages.models import Page
-    from mezzanine.core.managers import SearchableManager
+    from Yacms.pages.models import Page
+    from Yacms.core.managers import SearchableManager
 
     class Gallery(Page):
         pass
@@ -137,7 +137,7 @@ same fashion as outlined above for defining the fields to be used in a
 search by using a slightly different format for the ``search_fields``
 argument::
 
-    from mezzanine.pages.models import Page
+    from Yacms.pages.models import Page
 
     query = "plans prices projects"
     search_fields = {"title": 5, "content": 1}

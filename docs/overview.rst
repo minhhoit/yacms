@@ -8,18 +8,18 @@ The easiest method is to install directly from pypi using `pip`_ by
 running the command below, which will also install the required
 dependencies mentioned above::
 
-    $ pip install mezzanine
+    $ pip install Yacms
 
-If you prefer, you can download Mezzanine and install it directly from
+If you prefer, you can download Yacms and install it directly from
 source::
 
     $ python setup.py install
 
-Once installed, the command ``mezzanine-project`` can be used to
-create a new Mezzanine project in similar fashion to
+Once installed, the command ``Yacms-project`` can be used to
+create a new Yacms project in similar fashion to
 ``django-admin.py``::
 
-    $ mezzanine-project project_name
+    $ Yacms-project project_name
     $ cd project_name
     $ python manage.py createdb --noinput
     $ python manage.py runserver
@@ -37,10 +37,10 @@ default``). If you'd like to specify a different username and password
 during set up, simply exclude the ``--noinput`` option included above
 when running ``createdb``.
 
-For information on how to add Mezzanine to an existing Django project,
+For information on how to add Yacms to an existing Django project,
 see the FAQ section of the documentation.
 
-Mezzanine makes use of as few libraries as possible (apart from a
+Yacms makes use of as few libraries as possible (apart from a
 standard Django environment), with the following dependencies, which
 unless noted as optional, should be installed automatically following
 the above instructions:
@@ -81,126 +81,126 @@ selling `Premium Themes`_ thanks to `@joshcartme`_.
 Browser Support
 ===============
 
-Mezzanine's admin interface works with all modern browsers.
+Yacms's admin interface works with all modern browsers.
 Internet Explorer 7 and earlier are generally unsupported.
 
 
 Third-Party Plug-Ins
 ====================
 
-The following plug-ins have been developed outside of Mezzanine. If you
-have developed a plug-in to integrate with Mezzanine and would like to
-list it here, send an email to the `mezzanine-users`_ mailing list, or
+The following plug-ins have been developed outside of Yacms. If you
+have developed a plug-in to integrate with Yacms and would like to
+list it here, send an email to the `Yacms-users`_ mailing list, or
 better yet, fork the project and create a pull request with your
 plug-in added to the list below. We also ask that you add it to the
-`Mezzanine Grid on djangopackages.com`_.
+`Yacms Grid on djangopackages.com`_.
 
-* `Cartridge`_ - ecommerce for Mezzanine.
-* `Drum`_ - A `Hacker News`_ / `Reddit`_ clone powered by Mezzanine.
-* `mezzanine-html5boilerplate`_ - Integrates the
-  `html5boilerplate project`_  into Mezzanine.
-* `mezzanine-mdown`_ - Adds `Markdown`_ support to Mezzanine's rich
+* `Cartridge`_ - ecommerce for Yacms.
+* `Drum`_ - A `Hacker News`_ / `Reddit`_ clone powered by Yacms.
+* `Yacms-html5boilerplate`_ - Integrates the
+  `html5boilerplate project`_  into Yacms.
+* `Yacms-mdown`_ - Adds `Markdown`_ support to Yacms's rich
   text editor.
-* `mezzanine-openshift`_ - Setup for running Mezzanine on
+* `Yacms-openshift`_ - Setup for running Yacms on
   `Redhat's OpenShift`_ cloud platform.
-* `mezzanine-stackato`_ - Setup for running Mezzanine on
+* `Yacms-stackato`_ - Setup for running Yacms on
   `ActiveState's Stackato`_ cloud platform.
-* `mezzanine-blocks`_ - A Mezzanine flavored fork of
+* `Yacms-blocks`_ - A Yacms flavored fork of
   django-flatblocks.
-* `mezzanine-widgets`_ - Widget system for Mezzanine.
-* `mezzanine-themes`_ - A collection of Django/Mezzanine templates.
-* `mezzanine-twittertopic`_ - Manage multiple Twitter topic feeds
-  from the Mezzanine admin interface.
-* `mezzanine-captcha`_ - Adds CAPTCHA field types to Mezzanine's
+* `Yacms-widgets`_ - Widget system for Yacms.
+* `Yacms-themes`_ - A collection of Django/Yacms templates.
+* `Yacms-twittertopic`_ - Manage multiple Twitter topic feeds
+  from the Yacms admin interface.
+* `Yacms-captcha`_ - Adds CAPTCHA field types to Yacms's
   forms builder app.
-* `mezzanine-bookmarks`_ - A multi-user bookmark app for Mezzanine.
-* `mezzanine-events`_ - Events plugin for Mezzanine, with geocoding
+* `Yacms-bookmarks`_ - A multi-user bookmark app for Yacms.
+* `Yacms-events`_ - Events plugin for Yacms, with geocoding
   via Google Maps, iCalendar files, webcal URLs and directions via
   Google Calendar/Maps.
-* `mezzanine-polls`_ - Polls application for Mezzanine.
-* `mezzanine-pagedown`_ - Adds the `Pagedown`_ WYSIWYG editor to
-  Mezzanine.
-* `mezzanine-careers`_ - Job posting application for Mezzanine.
-* `mezzanine-recipes`_ - Recipes plugin with built-in REST API.
-* `mezzanine-slides`_ - Responsive banner slides app for Mezzanine.
-* `mezzyblocks`_ - Another app for adding blocks/modules to Mezzanine.
-* `mezzanine-flexipage`_ - Allows designers to manage content areas
+* `Yacms-polls`_ - Polls application for Yacms.
+* `Yacms-pagedown`_ - Adds the `Pagedown`_ WYSIWYG editor to
+  Yacms.
+* `Yacms-careers`_ - Job posting application for Yacms.
+* `Yacms-recipes`_ - Recipes plugin with built-in REST API.
+* `Yacms-slides`_ - Responsive banner slides app for Yacms.
+* `mezzyblocks`_ - Another app for adding blocks/modules to Yacms.
+* `Yacms-flexipage`_ - Allows designers to manage content areas
   in templates.
-* `mezzanine-instagram`_ - A simple Instagram app for Mezzanine.
-* `mezzanine-wiki`_ - Wiki app for Mezzanine.
-* `mezzanine-calendar`_ - Calendar pages in Mezzanine
-* `mezzanine-facebook`_ - Simple Facebook integration for Mezzanine.
-* `mezzanine-instagram-gallery`_ - Create Mezzanine galleries using
+* `Yacms-instagram`_ - A simple Instagram app for Yacms.
+* `Yacms-wiki`_ - Wiki app for Yacms.
+* `Yacms-calendar`_ - Calendar pages in Yacms
+* `Yacms-facebook`_ - Simple Facebook integration for Yacms.
+* `Yacms-instagram-gallery`_ - Create Yacms galleries using
   Instagram images.
-* `mezzanine-cli`_ - Command-line interface for Mezzanine.
-* `mezzanine-categorylink`_ - Integrates Mezzanine's Link pages with
+* `Yacms-cli`_ - Command-line interface for Yacms.
+* `Yacms-categorylink`_ - Integrates Yacms's Link pages with
   its blog categories.
-* `mezzanine-podcast`_ - A simple podcast streamer and manager for
-  Mezzanine.
-* `mezzanine-linkcollection`_ - Collect links. Feature them. Share
+* `Yacms-podcast`_ - A simple podcast streamer and manager for
+  Yacms.
+* `Yacms-linkcollection`_ - Collect links. Feature them. Share
   them over RSS.
-* `cash-generator`_ - Generate `GnuCash`_ invoices with Mezzanine.
-* `mezzanine-foundation`_ - `Zurb Foundation`_ theme for Mezzanine.
-* `mezzanine-file-collections`_ - Simple file collection page type
-  for Mezzanine.
-* `mezzanine-wymeditor`_ - `WYMeditor`_ adapted as the rich text
-  editor for Mezzanine.
-* `mezzanine-meze`_ - Adds support for `reStructuredText`_,
-  `Pygments`_ and more, to Mezzanine's rich text editing.
-* `mezzanine-pageimages`_ - Add background and banner images per page
-  in Mezzanine.
-* `mezzanine-protected-pages`_ - Restrict access to pages by group
+* `cash-generator`_ - Generate `GnuCash`_ invoices with Yacms.
+* `Yacms-foundation`_ - `Zurb Foundation`_ theme for Yacms.
+* `Yacms-file-collections`_ - Simple file collection page type
+  for Yacms.
+* `Yacms-wymeditor`_ - `WYMeditor`_ adapted as the rich text
+  editor for Yacms.
+* `Yacms-meze`_ - Adds support for `reStructuredText`_,
+  `Pygments`_ and more, to Yacms's rich text editing.
+* `Yacms-pageimages`_ - Add background and banner images per page
+  in Yacms.
+* `Yacms-protected-pages`_ - Restrict access to pages by group
   membership.
-* `mezzanine-page-auth`_ - A Mezzanine module for add group-level
+* `Yacms-page-auth`_ - A Yacms module for add group-level
   permission to pages.
 * `django-widgy`_ - Widget-oriented content editing. Includes an
-  adapter for Mezzanine and a powerful form builder.
-* `mezzanine-admin-backup`_ - Export your Mezzanine database and assets
+  adapter for Yacms and a powerful form builder.
+* `Yacms-admin-backup`_ - Export your Yacms database and assets
   directly from the admin.
-* `mezzanine-mailchimp`_ - Integrate Mezzanine forms with a MailChimp
+* `Yacms-mailchimp`_ - Integrate Yacms forms with a MailChimp
   subscription list.
-* `mezzanine-grappelli`_ - Integrates latest upstream
-  grappelli/filebrowser with Mezzanine.
-* `mezzanine-workout`_ - Store and display FIT data in Mezzanine.
-* `mezzanine-agenda`_ - Event functionality for your Mezzanine sites.
-* `mezzanine-dpaste`_ - Integrate `dpaste`_, a Django pastebin, into
-  your Mezzanine site.
-* `mezzanine-linkdump`_ - Create, display and track links in Mezzanine.
-* `mezzanine-people`_ - Categorize and list people in Mezzanine.
-* `mezzanine-webf`_ - Fabfile for deploying Mezzanine to Webfaction.
-* `mezzanineopenshift`_ Another setup for `Redhat's OpenShift`_ cloud
+* `Yacms-grappelli`_ - Integrates latest upstream
+  grappelli/filebrowser with Yacms.
+* `Yacms-workout`_ - Store and display FIT data in Yacms.
+* `Yacms-agenda`_ - Event functionality for your Yacms sites.
+* `Yacms-dpaste`_ - Integrate `dpaste`_, a Django pastebin, into
+  your Yacms site.
+* `Yacms-linkdump`_ - Create, display and track links in Yacms.
+* `Yacms-people`_ - Categorize and list people in Yacms.
+* `Yacms-webf`_ - Fabfile for deploying Yacms to Webfaction.
+* `Yacmsopenshift`_ Another setup for `Redhat's OpenShift`_ cloud
   platform.
-* `mezzanine-bsbanners`_ - Add `Twitter Bootstrap`_ Carousels and
-  Jumbotrons to Mezzanine.
-* `mezzanine-business-theme`_ - Starter business theme for Mezzanine.
-* `open-helpdesk`_ - A helpdesk app built with Mezzanine.
-* `mezzanine-invites`_ - Allow site registration via alphanumeric
+* `Yacms-bsbanners`_ - Add `Twitter Bootstrap`_ Carousels and
+  Jumbotrons to Yacms.
+* `Yacms-business-theme`_ - Starter business theme for Yacms.
+* `open-helpdesk`_ - A helpdesk app built with Yacms.
+* `Yacms-invites`_ - Allow site registration via alphanumeric
   invite codes.
-* `ansible-mezzanine`_ - Full pipeline (dev, staging, production)
-  deployment of Mezzanine using `Ansible`_.
-* `mezzanine-modal-announcements`_ - Popup announcements for Mezzanine
+* `ansible-Yacms`_ - Full pipeline (dev, staging, production)
+  deployment of Yacms using `Ansible`_.
+* `Yacms-modal-announcements`_ - Popup announcements for Yacms
   websites via Bootstrap modals.
-* `mezzanine-buffer`_ - `Buffer`_ integration for Mezzanine.
-* `mezzanine-slideshows`_ - Allows placement of Mezzanine galleries
-  within other Mezzanine pages as slideshows.
-* `mezzanine-onepage`_ - Design helper for single-page Mezzanine sites.
-* `mezzanine-api`_ - RESTful web API for Mezzanine.
-* `mezzanine-smartling`_ - Integrates Mezzanine content with
+* `Yacms-buffer`_ - `Buffer`_ integration for Yacms.
+* `Yacms-slideshows`_ - Allows placement of Yacms galleries
+  within other Yacms pages as slideshows.
+* `Yacms-onepage`_ - Design helper for single-page Yacms sites.
+* `Yacms-api`_ - RESTful web API for Yacms.
+* `Yacms-smartling`_ - Integrates Yacms content with
   `Smartling Translations`_.
-* `mezzanine-shortcodes`_ - `Wordpress shortcodes`_ for Mezzanine.
+* `Yacms-shortcodes`_ - `Wordpress shortcodes`_ for Yacms.
 
 
-Sites Using Mezzanine
+Sites Using Yacms
 =====================
 
-Got a site built with Mezzanine? You can add it to the gallery on
-the `Mezzanine project page`_ by adding it to the list below - just
+Got a site built with Yacms? You can add it to the gallery on
+the `Yacms project page`_ by adding it to the list below - just
 fork the project and create a pull request. Please omit the trailing
 slash in the URL, as we manually add that ourselves to feature
 certain sites.
 
 * `Citrus Agency <http://citrus.com.au/>`_
-* `Mezzanine Project <http://mezzanine.jupo.org>`_
+* `Yacms Project <http://Yacms.jupo.org>`_
 * `Nick Hagianis <http://hagianis.com>`_
 * `Thomas Johnson <http://tomfmason.net>`_
 * `Central Mosque Wembley <http://wembley-mosque.co.uk>`_
@@ -469,82 +469,82 @@ certain sites.
 * `Code Source <http://codesource.com.au/>`_
 * `The Federation of Egalitarian Communities <http://thefec.org>`_
 
-.. _`Mezzanine Grid on djangopackages.com`: http://www.djangopackages.com/grids/g/mezzanine/
+.. _`Yacms Grid on djangopackages.com`: http://www.djangopackages.com/grids/g/Yacms/
 .. _`Cartridge`: http://cartridge.jupo.org/
 .. _`Drum`: https://github.com/stephenmcd/drum
 .. _`Hacker News`: https://news.ycombinator.com
 .. _`Reddit`: http://www.reddit.com
-.. _`mezzanine-html5boilerplate`: https://github.com/tvon/mezzanine-html5boilerplate
-.. _`mezzanine-html5boilerplate`: https://github.com/tvon/mezzanine-html5boilerplate
+.. _`Yacms-html5boilerplate`: https://github.com/tvon/Yacms-html5boilerplate
+.. _`Yacms-html5boilerplate`: https://github.com/tvon/Yacms-html5boilerplate
 .. _`html5boilerplate project`: http://html5boilerplate.com/
-.. _`mezzanine-mdown`: https://bitbucket.org/onelson/mezzanine-mdown
+.. _`Yacms-mdown`: https://bitbucket.org/onelson/Yacms-mdown
 .. _`Markdown`: http://en.wikipedia.org/wiki/Markdown
-.. _`mezzanine-openshift`: https://github.com/overshard/mezzanine-openshift
+.. _`Yacms-openshift`: https://github.com/overshard/Yacms-openshift
 .. _`Redhat's OpenShift`: https://openshift.redhat.com/
 .. _`Ansible`: http://www.ansible.com/
-.. _`mezzanine-stackato`: https://github.com/Stackato-Apps/mezzanine
+.. _`Yacms-stackato`: https://github.com/Stackato-Apps/Yacms
 .. _`ActiveState's Stackato`: http://www.activestate.com/stackato
-.. _`mezzanine-blocks`: https://github.com/renyi/mezzanine-blocks
-.. _`mezzanine-widgets`: https://github.com/osiloke/mezzanine_widgets
-.. _`mezzanine-themes`: https://github.com/renyi/mezzanine-themes
-.. _`mezzanine-twittertopic`: https://github.com/lockhart/mezzanine-twittertopic
-.. _`mezzanine-captcha`: https://github.com/mjtorn/mezzanine-captcha
-.. _`mezzanine-bookmarks`: https://github.com/adieu/mezzanine-bookmarks
-.. _`mezzanine-events`: https://github.com/stbarnabas/mezzanine-events
-.. _`mezzanine-polls`: https://github.com/sebasmagri/mezzanine_polls
-.. _`mezzanine-pagedown`: https://bitbucket.org/akhayyat/mezzanine-pagedown
+.. _`Yacms-blocks`: https://github.com/renyi/Yacms-blocks
+.. _`Yacms-widgets`: https://github.com/osiloke/Yacms_widgets
+.. _`Yacms-themes`: https://github.com/renyi/Yacms-themes
+.. _`Yacms-twittertopic`: https://github.com/lockhart/Yacms-twittertopic
+.. _`Yacms-captcha`: https://github.com/mjtorn/Yacms-captcha
+.. _`Yacms-bookmarks`: https://github.com/adieu/Yacms-bookmarks
+.. _`Yacms-events`: https://github.com/stbarnabas/Yacms-events
+.. _`Yacms-polls`: https://github.com/sebasmagri/Yacms_polls
+.. _`Yacms-pagedown`: https://bitbucket.org/akhayyat/Yacms-pagedown
 .. _`PageDown`: https://code.google.com/p/pagedown/
-.. _`mezzanine-careers`: https://github.com/mogga/mezzanine-careers
-.. _`mezzanine-recipes`: https://github.com/tjetzinger/mezzanine-recipes
-.. _`mezzanine-slides`: https://github.com/overshard/mezzanine-slides
+.. _`Yacms-careers`: https://github.com/mogga/Yacms-careers
+.. _`Yacms-recipes`: https://github.com/tjetzinger/Yacms-recipes
+.. _`Yacms-slides`: https://github.com/overshard/Yacms-slides
 .. _`mezzyblocks`: https://github.com/jardaroh/mezzyblocks
-.. _`mezzanine-flexipage`: https://github.com/mrmagooey/mezzanine-flexipage
-.. _`mezzanine-wiki`: https://github.com/dfalk/mezzanine-wiki
-.. _`mezzanine-instagram`: https://github.com/shurik/Mezzanine_Instagram
-.. _`mezzanine-calendar`: https://github.com/shurik/mezzanine.calendar
-.. _`mezzanine-facebook`: https://github.com/shurik/Mezzanine_Facebook
-.. _`mezzanine-instagram-gallery`: https://github.com/georgeyk/mezzanine-instagram-gallery
-.. _`mezzanine-cli`: https://github.com/adieu/mezzanine-cli
-.. _`mezzanine-categorylink`: https://github.com/mjtorn/mezzanine-categorylink
-.. _`mezzanine-podcast`: https://github.com/carpie/mezzanine-podcast
-.. _`mezzanine-linkcollection`: https://github.com/mjtorn/mezzanine-linkcollection
+.. _`Yacms-flexipage`: https://github.com/mrmagooey/Yacms-flexipage
+.. _`Yacms-wiki`: https://github.com/dfalk/Yacms-wiki
+.. _`Yacms-instagram`: https://github.com/shurik/Yacms_Instagram
+.. _`Yacms-calendar`: https://github.com/shurik/Yacms.calendar
+.. _`Yacms-facebook`: https://github.com/shurik/Yacms_Facebook
+.. _`Yacms-instagram-gallery`: https://github.com/georgeyk/Yacms-instagram-gallery
+.. _`Yacms-cli`: https://github.com/adieu/Yacms-cli
+.. _`Yacms-categorylink`: https://github.com/mjtorn/Yacms-categorylink
+.. _`Yacms-podcast`: https://github.com/carpie/Yacms-podcast
+.. _`Yacms-linkcollection`: https://github.com/mjtorn/Yacms-linkcollection
 .. _`cash-generator`: https://github.com/ambientsound/cash-generator
 .. _`GnuCash`: http://www.gnucash.org/
-.. _`mezzanine-foundation`: https://github.com/zgohr/mezzanine-foundation
+.. _`Yacms-foundation`: https://github.com/zgohr/Yacms-foundation
 .. _`Zurb Foundation`: http://foundation.zurb.com/
-.. _`mezzanine-file-collections`: https://github.com/thibault/mezzanine-file-collections
-.. _`mezzanine-wymeditor`: https://github.com/excieve/mezzanine-wymeditor
+.. _`Yacms-file-collections`: https://github.com/thibault/Yacms-file-collections
+.. _`Yacms-wymeditor`: https://github.com/excieve/Yacms-wymeditor
 .. _`WYMeditor`: http://wymeditor.github.io/wymeditor/
-.. _`mezzanine-meze`: https://github.com/abakan/mezzanine-meze
+.. _`Yacms-meze`: https://github.com/abakan/Yacms-meze
 .. _`reStructuredText`: http://docutils.sourceforge.net/rst.html
 .. _`Pygments`: http://pygments.org/
-.. _`mezzanine-pageimages`: https://github.com/bcs-de/mezzanine-pageimages
-.. _`mezzanine-protected-pages`: https://github.com/evilchili/mezzanine-protected-pages
-.. _`mezzanine-page-auth`: https://github.com/simodalla/mezzanine_page_auth
+.. _`Yacms-pageimages`: https://github.com/bcs-de/Yacms-pageimages
+.. _`Yacms-protected-pages`: https://github.com/evilchili/Yacms-protected-pages
+.. _`Yacms-page-auth`: https://github.com/simodalla/Yacms_page_auth
 .. _`django-widgy`: http://django-widgy.readthedocs.org/en/latest/
-.. _`mezzanine-admin-backup`: https://bitbucket.org/joshcartme/mezzanine-admin-backup
-.. _`mezzanine-mailchimp`: https://bitbucket.org/naritas/mezzanine-mailchimp
-.. _`mezzanine-grappelli`: https://github.com/sephii/mezzanine-grappelli
-.. _`mezzanine-workout`: https://github.com/kampfschlaefer/mezzanine-workout
-.. _`mezzanine-agenda`: https://github.com/jpells/mezzanine-agenda
-.. _`mezzanine-dpaste`: https://github.com/prikhi/mezzanine-dpaste
-.. _`mezzanine-linkdump`: https://github.com/prikhi/mezzanine-linkdump
-.. _`mezzanine-people`: https://github.com/eci/mezzanine-people
-.. _`mezzanine-webf`: https://github.com/jerivas/mezzanine-webf
-.. _`mezzanineopenshift`: https://bitbucket.org/radeksvarz/mezzanineopenshift
-.. _`mezzanine-bsbanners`: https://pypi.python.org/pypi/mezzanine-bsbanners
-.. _`mezzanine-business-theme`: https://github.com/dfalk/mezzanine-business-theme
+.. _`Yacms-admin-backup`: https://bitbucket.org/joshcartme/Yacms-admin-backup
+.. _`Yacms-mailchimp`: https://bitbucket.org/naritas/Yacms-mailchimp
+.. _`Yacms-grappelli`: https://github.com/sephii/Yacms-grappelli
+.. _`Yacms-workout`: https://github.com/kampfschlaefer/Yacms-workout
+.. _`Yacms-agenda`: https://github.com/jpells/Yacms-agenda
+.. _`Yacms-dpaste`: https://github.com/prikhi/Yacms-dpaste
+.. _`Yacms-linkdump`: https://github.com/prikhi/Yacms-linkdump
+.. _`Yacms-people`: https://github.com/eci/Yacms-people
+.. _`Yacms-webf`: https://github.com/jerivas/Yacms-webf
+.. _`Yacmsopenshift`: https://bitbucket.org/radeksvarz/Yacmsopenshift
+.. _`Yacms-bsbanners`: https://pypi.python.org/pypi/Yacms-bsbanners
+.. _`Yacms-business-theme`: https://github.com/dfalk/Yacms-business-theme
 .. _`open-helpdesk`: https://github.com/simodalla/open-helpdesk
-.. _`mezzanine-invites`: https://github.com/averagehuman/mezzanine-invites
-.. _`ansible-mezzanine`: https://github.com/keithadavidson/ansible-mezzanine
-.. _`mezzanine-modal-announcements`: https://github.com/joshcartme/mezzanine-modal-announcements
-.. _`mezzanine-buffer`: https://github.com/caffodian/mezzanine-buffer
+.. _`Yacms-invites`: https://github.com/averagehuman/Yacms-invites
+.. _`ansible-Yacms`: https://github.com/keithadavidson/ansible-Yacms
+.. _`Yacms-modal-announcements`: https://github.com/joshcartme/Yacms-modal-announcements
+.. _`Yacms-buffer`: https://github.com/caffodian/Yacms-buffer
 .. _`Buffer`: http://buffer.com
-.. _`mezzanine-slideshows`: https://github.com/philipsouthwell/mezzanine-slideshows
-.. _`mezzanine-onepage`: https://github.com/lucmilland/mezzanine-onepage
-.. _`mezzanine-api`: https://github.com/gcushen/mezzanine-api
-.. _`mezzanine-smartling`: https://github.com/Appdynamics/mezzanine-smartling
-.. _`mezzanine-shortcodes`: https://github.com/ryneeverett/mezzanine-shortcodes
+.. _`Yacms-slideshows`: https://github.com/philipsouthwell/Yacms-slideshows
+.. _`Yacms-onepage`: https://github.com/lucmilland/Yacms-onepage
+.. _`Yacms-api`: https://github.com/gcushen/Yacms-api
+.. _`Yacms-smartling`: https://github.com/Appdynamics/Yacms-smartling
+.. _`Yacms-shortcodes`: https://github.com/ryneeverett/Yacms-shortcodes
 
 .. _`Wordpress shortcodes`: https://codex.wordpress.org/Shortcode
 .. _`Smartling Translations`: http://www.smartling.com/

@@ -2,7 +2,7 @@
 Device Handling
 ===============
 
-Mezzanine comes with the ability to use different sets of templates
+Yacms comes with the ability to use different sets of templates
 depending on the device being used to access the website. For example one
 set of templates may be used for desktop browsers with a corresponding set
 of templates being used for mobile phones.
@@ -43,15 +43,15 @@ module::
 Mobile Theme
 ============
 
-Mezzanine includes the app :mod:`mezzanine.mobile` which contains a full
+Yacms includes the app :mod:`Yacms.mobile` which contains a full
 set of default templates and assets for creating a mobile version of
-your site. Simply add :mod:`mezzanine.mobile` to your :django:setting:`INSTALLED_APPS`
+your site. Simply add :mod:`Yacms.mobile` to your :django:setting:`INSTALLED_APPS`
 setting to use it.
 
 Implementation Considerations
 =============================
 
-Using the :ref:`DEVICE_USER_AGENTS` setting, Mezzanine simply prefixes
+Using the :ref:`DEVICE_USER_AGENTS` setting, Yacms simply prefixes
 any referenced template path with the device specific sub-directory name
 if a user agent matches one of the strings specified for the device. For
 example if a user agent matches the ``mobile`` device set of templates,
@@ -59,17 +59,17 @@ a reference to ``blog/index.html`` will be changed to the list
 ``["mobile/blog/index.html", "blog/index.html"]`` under the hood.
 
 To achieve this, the middleware
-:class:`mezzanine.core.middleware.TemplateForDeviceMiddleware` catches Django
+:class:`Yacms.core.middleware.TemplateForDeviceMiddleware` catches Django
 ``TemplateResponse`` responses, and changes the template list prior to
 the response being rendered. As such, any views you implement should
-return ``TemplateResponse`` objects. The table below lists Mezzanine
+return ``TemplateResponse`` objects. The table below lists Yacms
 versions of Django features that can be used to ensure a
 ``TemplateResponse`` is returned.
 
 ==================================================  ==================================================
-Django                                              Mezzanine
+Django                                              Yacms
 ==================================================  ==================================================
-``django.shortcuts.render``                         :func:`mezzanine.utils.views.render`
-``django.template.Library().inclusion_tag``         :meth:`mezzanine.template.Library().inclusion_tag`
-``django.views.generic.simple.direct_to_template``  :func:`mezzanine.core.views.direct_to_template`
+``django.shortcuts.render``                         :func:`Yacms.utils.views.render`
+``django.template.Library().inclusion_tag``         :meth:`Yacms.template.Library().inclusion_tag`
+``django.views.generic.simple.direct_to_template``  :func:`Yacms.core.views.direct_to_template`
 ==================================================  ==================================================

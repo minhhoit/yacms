@@ -3,469 +3,469 @@ Packages
 ========
 
 Below are auto-generated docs mostly covering each of the packages contained
-within Mezzanine that are added to ``settings.INSTALLED_APPS``.
+within Yacms that are added to ``settings.INSTALLED_APPS``.
 
 
 
 
-``mezzanine.boot``
+``Yacms.boot``
 ==================
 
-.. automodule:: mezzanine.boot
+.. automodule:: Yacms.boot
    :members:
 
 
 
-``mezzanine.core``
+``Yacms.core``
 ==================
 
-.. automodule:: mezzanine.core
+.. automodule:: Yacms.core
 
-``mezzanine.core.models``
+``Yacms.core.models``
 -------------------------
 
-.. automodule:: mezzanine.core.models
+.. automodule:: Yacms.core.models
    :members:
 
-``mezzanine.core.managers``
+``Yacms.core.managers``
 ---------------------------
 
-.. automodule:: mezzanine.core.managers
+.. automodule:: Yacms.core.managers
    :members:
 
-``mezzanine.core.views``
+``Yacms.core.views``
 ------------------------
 
-.. automodule:: mezzanine.core.views
+.. automodule:: Yacms.core.views
    :members:
 
-``mezzanine.core.forms``
+``Yacms.core.forms``
 ------------------------
 
-.. automodule:: mezzanine.core.forms
+.. automodule:: Yacms.core.forms
    :members:
 
-``mezzanine.core.admin``
+``Yacms.core.admin``
 ------------------------
 
-.. automodule:: mezzanine.core.admin
+.. automodule:: Yacms.core.admin
    :members:
 
-``mezzanine.core.middleware``
+``Yacms.core.middleware``
 -----------------------------
 
-.. automodule:: mezzanine.core.middleware
+.. automodule:: Yacms.core.middleware
    :members:
 
-``mezzanine.core.templatetags.mezzanine_tags``
+``Yacms.core.templatetags.Yacms_tags``
 ----------------------------------------------
 
-.. automodule:: mezzanine.core.templatetags.mezzanine_tags
+.. automodule:: Yacms.core.templatetags.Yacms_tags
    :members:
 
-``mezzanine.core.management.commands``
+``Yacms.core.management.commands``
 --------------------------------------
 
-.. automodule:: mezzanine.core.management.commands.createdb
+.. automodule:: Yacms.core.management.commands.createdb
    :members:
 
-``mezzanine.core.request``
+``Yacms.core.request``
 --------------------------
 
-.. automodule:: mezzanine.core.request
+.. automodule:: Yacms.core.request
    :members:
 
-``mezzanine.core.tests``
+``Yacms.core.tests``
 ------------------------
 
-.. automodule:: mezzanine.core.tests
+.. automodule:: Yacms.core.tests
    :members:
 
 
 
 
-``mezzanine.pages``
+``Yacms.pages``
 ===================
 
-.. automodule:: mezzanine.pages
+.. automodule:: Yacms.pages
 
-``mezzanine.pages.models``
+``Yacms.pages.models``
 --------------------------
 
-.. automodule:: mezzanine.pages.models
+.. automodule:: Yacms.pages.models
    :members:
 
-``mezzanine.pages.views``
+``Yacms.pages.views``
 -------------------------
 
-.. automodule:: mezzanine.pages.views
+.. automodule:: Yacms.pages.views
    :members:
 
-``mezzanine.pages.admin``
+``Yacms.pages.admin``
 -------------------------
 
-.. automodule:: mezzanine.pages.admin
+.. automodule:: Yacms.pages.admin
    :members:
 
-``mezzanine.pages.middleware``
+``Yacms.pages.middleware``
 ------------------------------
 
-.. automodule:: mezzanine.pages.middleware
+.. automodule:: Yacms.pages.middleware
    :members:
 
-``mezzanine.pages.templatetags.pages_tags``
+``Yacms.pages.templatetags.pages_tags``
 -------------------------------------------
 
-.. automodule:: mezzanine.pages.templatetags.pages_tags
+.. automodule:: Yacms.pages.templatetags.pages_tags
    :members:
 
-``mezzanine.pages.page_processors``
+``Yacms.pages.page_processors``
 -----------------------------------
 
-.. automodule:: mezzanine.pages.page_processors
+.. automodule:: Yacms.pages.page_processors
    :members:
 
 
 
 
-``mezzanine.generic``
+``Yacms.generic``
 =====================
 
-.. automodule:: mezzanine.generic
+.. automodule:: Yacms.generic
 
-``mezzanine.generic.models``
+``Yacms.generic.models``
 ----------------------------
 
-.. automodule:: mezzanine.generic.models
+.. automodule:: Yacms.generic.models
    :members:
 
-``mezzanine.generic.managers``
+``Yacms.generic.managers``
 ------------------------------
 
-.. automodule:: mezzanine.generic.managers
+.. automodule:: Yacms.generic.managers
    :members:
 
-``mezzanine.generic.fields``
+``Yacms.generic.fields``
 ----------------------------
 
-.. automodule:: mezzanine.generic.fields
+.. automodule:: Yacms.generic.fields
    :members:
 
-``mezzanine.generic.views``
+``Yacms.generic.views``
 ---------------------------
 
-.. automodule:: mezzanine.generic.views
+.. automodule:: Yacms.generic.views
    :members:
 
-``mezzanine.generic.forms``
+``Yacms.generic.forms``
 ---------------------------
 
-.. automodule:: mezzanine.generic.forms
+.. automodule:: Yacms.generic.forms
    :members:
 
-``mezzanine.generic.admin``
+``Yacms.generic.admin``
 ---------------------------
 
-.. automodule:: mezzanine.generic.admin
+.. automodule:: Yacms.generic.admin
    :members:
 
-``mezzanine.generic.templatetags.comment_tags``
+``Yacms.generic.templatetags.comment_tags``
 -----------------------------------------------
 
-.. automodule:: mezzanine.generic.templatetags.comment_tags
+.. automodule:: Yacms.generic.templatetags.comment_tags
    :members:
 
-``mezzanine.generic.templatetags.disqus_tags``
+``Yacms.generic.templatetags.disqus_tags``
 -----------------------------------------------
 
-.. automodule:: mezzanine.generic.templatetags.disqus_tags
+.. automodule:: Yacms.generic.templatetags.disqus_tags
    :members:
 
-``mezzanine.generic.templatetags.keyword_tags``
+``Yacms.generic.templatetags.keyword_tags``
 -----------------------------------------------
 
-.. automodule:: mezzanine.generic.templatetags.keyword_tags
+.. automodule:: Yacms.generic.templatetags.keyword_tags
    :members:
 
-``mezzanine.generic.templatetags.rating_tags``
+``Yacms.generic.templatetags.rating_tags``
 -----------------------------------------------
 
-.. automodule:: mezzanine.generic.templatetags.rating_tags
+.. automodule:: Yacms.generic.templatetags.rating_tags
    :members:
 
 
 
 
-``mezzanine.blog``
+``Yacms.blog``
 ==================
 
-.. automodule:: mezzanine.blog
+.. automodule:: Yacms.blog
 
-``mezzanine.blog.models``
+``Yacms.blog.models``
 -------------------------
 
-.. automodule:: mezzanine.blog.models
+.. automodule:: Yacms.blog.models
    :members:
 
-``mezzanine.blog.views``
+``Yacms.blog.views``
 ------------------------
 
-.. automodule:: mezzanine.blog.views
+.. automodule:: Yacms.blog.views
    :members:
 
-``mezzanine.blog.forms``
+``Yacms.blog.forms``
 ------------------------
 
-.. automodule:: mezzanine.blog.forms
+.. automodule:: Yacms.blog.forms
    :members:
 
-``mezzanine.blog.admin``
+``Yacms.blog.admin``
 ------------------------
 
-.. automodule:: mezzanine.blog.admin
+.. automodule:: Yacms.blog.admin
    :members:
 
-``mezzanine.blog.feeds``
+``Yacms.blog.feeds``
 ------------------------
 
-.. automodule:: mezzanine.blog.feeds
+.. automodule:: Yacms.blog.feeds
    :members:
 
-``mezzanine.blog.templatetags.blog_tags``
+``Yacms.blog.templatetags.blog_tags``
 -----------------------------------------
 
-.. automodule:: mezzanine.blog.templatetags.blog_tags
+.. automodule:: Yacms.blog.templatetags.blog_tags
    :members:
 
-``mezzanine.blog.management.base``
+``Yacms.blog.management.base``
 ----------------------------------
 
-.. automodule:: mezzanine.blog.management.base
+.. automodule:: Yacms.blog.management.base
    :members:
 
-``mezzanine.blog.management.commands``
+``Yacms.blog.management.commands``
 --------------------------------------
 
-.. automodule:: mezzanine.blog.management.commands.import_rss
+.. automodule:: Yacms.blog.management.commands.import_rss
    :members:
 
-.. automodule:: mezzanine.blog.management.commands.import_blogger
+.. automodule:: Yacms.blog.management.commands.import_blogger
    :members:
 
-.. automodule:: mezzanine.blog.management.commands.import_wordpress
+.. automodule:: Yacms.blog.management.commands.import_wordpress
    :members:
 
-.. automodule:: mezzanine.blog.management.commands.import_tumblr
+.. automodule:: Yacms.blog.management.commands.import_tumblr
    :members:
 
 
 
-``mezzanine.accounts``
+``Yacms.accounts``
 ======================
 
-.. automodule:: mezzanine.accounts
+.. automodule:: Yacms.accounts
    :members:
 
-``mezzanine.accounts.views``
+``Yacms.accounts.views``
 ----------------------------
 
-.. automodule:: mezzanine.accounts.views
+.. automodule:: Yacms.accounts.views
    :members:
 
-``mezzanine.accounts.forms``
+``Yacms.accounts.forms``
 ----------------------------
 
-.. automodule:: mezzanine.accounts.forms
+.. automodule:: Yacms.accounts.forms
    :members:
 
-``mezzanine.accounts.templatetags.accounts_tags``
+``Yacms.accounts.templatetags.accounts_tags``
 -------------------------------------------------
 
-.. automodule:: mezzanine.accounts.templatetags.accounts_tags
+.. automodule:: Yacms.accounts.templatetags.accounts_tags
    :members:
 
-``mezzanine.accounts.admin``
+``Yacms.accounts.admin``
 ----------------------------
 
-.. automodule:: mezzanine.accounts.admin
+.. automodule:: Yacms.accounts.admin
    :members:
 
 
 
-``mezzanine.forms``
+``Yacms.forms``
 ===================
 
-.. automodule:: mezzanine.forms
+.. automodule:: Yacms.forms
 
-``mezzanine.forms.models``
+``Yacms.forms.models``
 -------------------------------
 
-.. automodule:: mezzanine.forms.models
+.. automodule:: Yacms.forms.models
    :members:
 
-``mezzanine.forms.forms``
+``Yacms.forms.forms``
 ------------------------------
 
-.. automodule:: mezzanine.forms.forms
+.. automodule:: Yacms.forms.forms
    :members:
 
-``mezzanine.forms.page_processors``
+``Yacms.forms.page_processors``
 ----------------------------------------
 
-.. automodule:: mezzanine.forms.page_processors
+.. automodule:: Yacms.forms.page_processors
    :members:
 
-``mezzanine.forms.admin``
+``Yacms.forms.admin``
 ------------------------------
 
-.. automodule:: mezzanine.forms.admin
+.. automodule:: Yacms.forms.admin
    :members:
 
 
 
 
-``mezzanine.galleries``
+``Yacms.galleries``
 =======================
 
-.. automodule:: mezzanine.galleries
+.. automodule:: Yacms.galleries
 
-``mezzanine.galleries.models``
+``Yacms.galleries.models``
 -------------------------------
 
-.. automodule:: mezzanine.galleries.models
+.. automodule:: Yacms.galleries.models
    :members:
 
-``mezzanine.galleries.admin``
+``Yacms.galleries.admin``
 -------------------------------
 
-.. automodule:: mezzanine.galleries.admin
+.. automodule:: Yacms.galleries.admin
    :members:
 
 
 
 
-``mezzanine.conf``
+``Yacms.conf``
 ==================
 
-.. automodule:: mezzanine.conf
+.. automodule:: Yacms.conf
    :members:
 
-``mezzanine.conf.models``
+``Yacms.conf.models``
 -------------------------
 
-.. automodule:: mezzanine.conf.models
+.. automodule:: Yacms.conf.models
    :members:
 
-``mezzanine.conf.forms``
+``Yacms.conf.forms``
 ------------------------
 
-.. automodule:: mezzanine.conf.forms
+.. automodule:: Yacms.conf.forms
    :members:
 
-``mezzanine.conf.admin``
+``Yacms.conf.admin``
 ------------------------
 
-.. automodule:: mezzanine.conf.admin
+.. automodule:: Yacms.conf.admin
    :members:
 
-``mezzanine.conf.context_processors``
+``Yacms.conf.context_processors``
 -------------------------------------
 
-.. automodule:: mezzanine.conf.context_processors
+.. automodule:: Yacms.conf.context_processors
    :members:
 
 
 
 
-``mezzanine.template``
+``Yacms.template``
 ======================
 
-.. automodule:: mezzanine.template
+.. automodule:: Yacms.template
    :members:
 
-``mezzanine.template.loader_tags``
+``Yacms.template.loader_tags``
 ==================================
 
-.. automodule:: mezzanine.template.loader_tags
+.. automodule:: Yacms.template.loader_tags
    :members:
 
 
 
 
-``mezzanine.twitter``
+``Yacms.twitter``
 =====================
 
-.. automodule:: mezzanine.twitter
+.. automodule:: Yacms.twitter
 
-``mezzanine.twitter.models``
+``Yacms.twitter.models``
 ----------------------------
 
-.. automodule:: mezzanine.twitter.models
+.. automodule:: Yacms.twitter.models
    :members:
 
-``mezzanine.twitter.managers``
+``Yacms.twitter.managers``
 ------------------------------
 
-.. automodule:: mezzanine.twitter.managers
+.. automodule:: Yacms.twitter.managers
    :members:
 
-``mezzanine.twitter.templatetags.twitter_tags``
+``Yacms.twitter.templatetags.twitter_tags``
 -----------------------------------------------
 
-.. automodule:: mezzanine.twitter.templatetags.twitter_tags
+.. automodule:: Yacms.twitter.templatetags.twitter_tags
    :members:
 
-``mezzanine.twitter.management.commands``
+``Yacms.twitter.management.commands``
 -----------------------------------------
 
-.. automodule:: mezzanine.twitter.management.commands.poll_twitter
+.. automodule:: Yacms.twitter.management.commands.poll_twitter
    :members:
 
 
 
 
-``mezzanine.utils``
+``Yacms.utils``
 ===================
 
-.. automodule:: mezzanine.utils
+.. automodule:: Yacms.utils
 
-.. automodule:: mezzanine.utils.cache
+.. automodule:: Yacms.utils.cache
    :members:
 
-.. automodule:: mezzanine.utils.conf
+.. automodule:: Yacms.utils.conf
    :members:
 
-.. automodule:: mezzanine.utils.device
+.. automodule:: Yacms.utils.device
    :members:
 
-.. automodule:: mezzanine.utils.docs
+.. automodule:: Yacms.utils.docs
    :members:
 
-.. automodule:: mezzanine.utils.email
+.. automodule:: Yacms.utils.email
    :members:
 
-.. automodule:: mezzanine.utils.html
+.. automodule:: Yacms.utils.html
    :members:
 
-.. automodule:: mezzanine.utils.importing
+.. automodule:: Yacms.utils.importing
    :members:
 
-.. automodule:: mezzanine.utils.models
+.. automodule:: Yacms.utils.models
    :members:
 
-.. automodule:: mezzanine.utils.sites
+.. automodule:: Yacms.utils.sites
    :members:
 
-.. automodule:: mezzanine.utils.tests
+.. automodule:: Yacms.utils.tests
    :members:
 
-.. automodule:: mezzanine.utils.timezone
+.. automodule:: Yacms.utils.timezone
    :members:
 
-.. automodule:: mezzanine.utils.urls
+.. automodule:: Yacms.utils.urls
    :members:
 
-.. automodule:: mezzanine.utils.views
+.. automodule:: Yacms.utils.views
    :members:
 
 
